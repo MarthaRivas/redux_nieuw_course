@@ -18,36 +18,76 @@ const initialState = {
 
 // actions
 
-export function addStudent() {
-  return { type: "ADD_STUDENT", payload: [ "olmo", "anna", "liza"] }
+export function addStudent(Student) {
+  return { type: "ADD_STUDENT", payload: Student }
 }
 
-export function removeStudent() {
-  return { type: "REMOVE_STUDENT", payload: null }
+export function removeStudent(quitstudent) {
+  return { type: "REMOVE_STUDENT", payload: quitstudent }
 }
 
-export function addCourse() {
-  return { type: "ADD_COURSE", payload: null }
+export function addCourse(course) {
+  return { type: "ADD_COURSE", payload: course, }
 }
 
-export function removeCourse() {
-  return { type: "REMOVE_COURSE", payload: null }
+export function removeCourse(course) {
+  return { type: "REMOVE_COURSE", payload: course }
 }
 
-export function enroll() {
-  return { type: "ENROLL", payload: null }
+export function enroll(Student, course) {
+  return { type: "ENROLL", payload: Student.course }
 }
 
-export function quit() {
-  return { type: "QUIT", payload: null }
+export function quit(Student, course) {
+  return { type: "QUIT", payload: Student.course}
 }
 
 
 // reducer
 
 function reducer(state, action) {
-  return state
+  if (action.type === "ADD_STUDENT")
+ 
+  
+  return {...state,}
 }
+
+{
+  if (action.type === "REMOVE_STUDENT")
+ 
+  
+  return {...state,}
+}
+
+{
+  if (action.type === "ADD_COURSE")
+ 
+  
+  return {...state,}
+}
+
+{
+  if (action.type === "REMOVE_COURSE")
+ 
+  
+  return {...state,}
+}
+
+{
+  if (action.type === "ENROLL")
+ 
+  
+  return {...state,
+  enrollments: {}}
+}
+
+{
+  if (action.type === "QUIT")
+ 
+  
+  return {...state,}
+}
+
 
 // store
 
